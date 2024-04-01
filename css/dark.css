@@ -1,0 +1,124 @@
+/* Dark Mode Body */
+body {
+    background-color: #1D1B26;
+    color: #FFF; /* White text color */
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* Heading Styles */
+h1, h3, h4, h5, h6 {
+    color: #FFF; /* White text color */
+}
+
+.visualization {
+	color: #00000;
+}
+.text-item h2{
+    font-size: 40px;
+    line-height: 1;
+    color: white;
+}
+
+h2 {
+	color:00000;
+}
+
+/* Paragraph Styles */
+p {
+    color: #BBB; /* Light gray text color */
+}
+
+/* Navigation Bar */
+header {
+    background: #121212; /* Dark gray background */
+}
+
+.logo {
+    float: left;
+    padding: 10px 0;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 30px; /* Reduced margin */
+    padding-top: 23px;
+    position: relative;
+}
+
+nav a {
+    color: #BBB; /* Light gray text color */
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #FFF; /* White text color on hover */
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #FFF; /* White line color */
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+/* Dark Mode Toggle Button */
+#check {
+    color: #FFF; /* White text color */
+    background-color: transparent; /* Transparent background */
+    font-size: 15px;
+    padding: 15px;
+    border: 2px solid #FFF; /* White border */
+    border-radius: 50%; /* Circular button shape */
+	background-image: url("Images/sunicon.png");
+}
+
+#check::before {
+    color: #FFF; /* White text color */
+    background-color: transparent; /* Transparent background */
+    font-size: 15px;
+    padding: 15px;
+    border: 2px solid #FFF; /* White border */
+    border-radius: 50%; /* Circular button shape */
+	background-image: url("Images/moonicon.png");
+}
+
+
+
+/* Expense Name and Amount */
+.expense-name,
+.expense-amount {
+    color: #FFF; /* White text color */
+}
+
+/* Chart */
+.expenseChart {
+    color: #FFF; /* White text color */
+}
+
+/* Example of gradient background */
+/*
+body {
+    background: rgb(15, 15, 15); 
+    background: linear-gradient(90deg, rgba(15, 15, 15, 1) 0%, rgba(33, 33, 33, 1) 100%);
+}
+*/
