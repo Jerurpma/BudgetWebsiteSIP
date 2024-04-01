@@ -1,0 +1,130 @@
+ body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("C:/Users/DELL/OneDrive/Desktop/webpage/cool-background.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #0d0909;
+            transition: background-color 0.5s ease;
+        }
+
+      header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+#check {
+	color: black; /* White text color */
+    background-color: transparent; /* Transparent background */
+    font-size: 15px;
+    padding: 15px;
+    border: 2px solid #FFF; /* White border */
+    border-radius: 50%; /* Circular button shape */
+	background-image: url("Images/darkicon.png");
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 30px; /* Reduced margin */
+    padding-top: 23px;
+    position: relative;
+}
+
+nav a {
+    color: #FFF; /* Light gray text color */
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #FFF; /* White text color on hover */
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #FFF; /* White line color */
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+.Navigation {
+  color: #ffffff;
+  float: left;
+  font-size: 24px;
+}
+        section {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            margin: 20px;
+            transition: background-color 0.5s ease, box-shadow 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section:hover {
+            background-color: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 0.5em 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .tool {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #faf7f2; /* Vibrant orange color */
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        .tool:hover {
+            transform: scale(1.05);
+        }
+
+        .tool h3 {
+            color: #050303;
+        }
+
+        .tool p {
+            color: #333;
+        }

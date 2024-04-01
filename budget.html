@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+	 <link rel="stylesheet" href="darkmode.css"> 
+</head>
+<body>
+
+
+<header>
+    <div class="container">
+  <h2 class ="Navigation">Navigation</h2>	
+	<nav class="menu">
+	<!--
+	Incorporates the navigation menu into its own class
+	-->
+		<ul class="menu mb-10">
+		<!--
+		Makes the menu become indented
+		-->
+			<li><a class="menu" href="index.html">Home</a></li>
+			<!--
+			Links the navigation menu to its specified location this one being the home.html
+			-->
+
+			<li><a class="menu" href="toolselection.html">Tools</a></li> <li><a class="menu" href="expenses.html">Expenses</a><li><a class="menu" href="gacha.html">Gacha</a></li> <li><a class="menu" href="contact.html">Contact Us</a></li> <li><a class="menu" href="aboutus.html">About Us</a></li> <li> <a class="menu"><div style="display: flex;flex-direction: row;">
+        <button type="button" id="check" onclick="changeStatus()"></button>
+    </div></a></li>	</ul> <br>
+    </header>
+    </div>
+	
+        <h1>Expense Tracker</h1>
+
+        <form method="post" action="" name="expense-form">
+		
+            <label for="expense-name" class="expense-name">Expense Name:</label>
+			<input type="text" id="expense-name" name="expense-name" required><br>
+
+
+            <label for="expense-amount" class="expense-amount">Expense Amount:</label>
+            <input type="number" step="0.01" id="expense-amount" name="expense-amount" required><br>
+			
+			<label for="budget-amount-input">Enter Maximum Budget:</label>
+			<input type="number" id="budget-amount-input" required>
+			<button type="button" onclick="updateBudget()">Update Budget</button>
+
+
+            <button type="submit">Add Expense</button>
+		
+			<button type="button" onclick="clearExpenses()">Clear Expenses</button>
+
+        </form>
+
+        <hr>
+
+        <h2>Expenses:</h2>
+        <ul id="expenses-list">
+        </ul>
+
+        <hr>
+
+        <h2>Budget:</h2>
+        <div id="budget-info">
+            <p>Budget Amount: <span id="budget-amount">0.00</span></p>
+            <p>Remaining Budget: <span id="remaining-budget">0.00</span></p>
+        </div>
+<div class="visualization">
+        <h2>Visualization:</h2>
+        <div>
+            <canvas id="expenseChart"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="script.js"></script>
+	<script src="dark.js"></script>
+      
+</body>
+</html>
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="expenses.css">
+			<title>Expenses</title>
+		
+	</head>
+	<body>
+	 <header>
+    <div class="container">
+		 <h2 class ="Navigation">Navigation</h2>	
+	<nav class="menu">
+	<!--
+	Incorporates the navigation menu into its own class
+	-->
+		<ul class="menu mb-10">
+		<!--
+		Makes the menu become indented
+		-->
+			<li><a class="menu" href="index.html">Home</a></li>
+			<!--
+			Links the navigation menu to its specified location this one being the home.html
+			-->
+<li><a class="menu" href="toolselection.html">Tools</a></li> <li><a class="menu" href="expenses.html">Expenses</a><li><a class="menu" href="gacha.html">Gacha</a></li> <li><a class="menu" href="contact.html">Contact Us</a></li> <li><a class="menu" href="aboutus.html">About Us</a></li> <li> <a class="menu"><div style="display: flex;flex-direction: row;">
+        <button type="button" id="check" onclick="changeStatus()"></button>
+    </div></a></li>	</ul> <br>
+    </header>
+		<h1>
+		Hello and welcome add your expense down below and it will add to your spreadsheet <br> Add Expense Date, Expense Name And Expense Amount
+		</h1>
+		
+		 <div class="col-sm-6 col-md-5">
+
+                    <div class="appointment-form top-space-lg" id="form">
+
+                        <div class="form-header">
+                            <h4>Add Expense</h4>
+                           
+                        </div>
+
+							  <form action="https://hook.us1.make.com/cdkk9cbden5w28ze6ieb8h8j2wybenyi" method="POST">
+							  <!-- don't forget the redirect field for Integromat -->
+        <input type="hidden" id="redirect" name="redirect" value="https://docs.google.com/spreadsheets/d/1xJ1yVYhkzdlkfC51U6-JuV-ULMf0p9lF6IoW2M-tvzo/edit#gid=0">
+                            <div class="form-group">
+                                <label>Expense Name</label>
+                                <input type="text" class="form-control" name="name" required title="Expense name needs to be included">
+                            </div>
+                            <div class="form-group">
+                                <label>Expense Amount</label>
+                                <input type="text" class="form-control" name="address" required title="Please enter in Expense Amount">
+                            </div>
+                    
+                            <div class="form-group">
+                                <label>Expense Date</label>
+                                <input type="date" class="form-control" name="date" required title="Date is required">
+                            </div>
+							
+                          
+						
+                            <div class="text-center top-space">
+                                <button type="submit" class="btn btn-success btn-block btn-xl" id="js-contact-btn">Add Expense</button>
+                                <div id="js-contact-result" data-success-msg="Form submitted successfully." data-error-msg="Oops. Something went wrong."></div>
+                            </div>
+							
+
+                        </form>
+						<script src="dark.js"></script>
+						
+						
+                    </div>
+	
+	</body>
+	
+</html>
