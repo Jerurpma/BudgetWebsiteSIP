@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventures 40-60 Randomizer</title>
+   <link rel="stylesheet" href="randomizeradventure.css">
+</head>
+<body>
+    <h1>Adventures 40-60 Randomizer</h1>
+    <button onclick="randomizeImages()">Randomize Images</button>
+    <div class="container" id="imageContainer">
+        <!-- Images will be inserted here -->
+    </div>
+
+    <script>
+        // Function to randomize images
+        function randomizeImages() {
+            var images = document.querySelectorAll('.image');
+            var imageContainer = document.getElementById('imageContainer');
+
+            // Remove existing images
+            imageContainer.innerHTML = '';
+
+            // Array of image URLs
+            var imageURLs = [
+                'image1.jpg',
+                'image2.jpg',
+                'image3.jpg',
+                // Add more image URLs here
+            ];
+
+            // Shuffle the image URLs
+            imageURLs = shuffleArray(imageURLs);
+
+            // Create image elements and append them to the container
+            imageURLs.forEach(function(url) {
+                var img = document.createElement('img');
+                img.src = url;
+                img.className = 'image';
+                imageContainer.appendChild(img);
+            });
+        }
+
+        // Function to shuffle array
+        function shuffleArray(array) {
+            for (var i = array.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+            return array;
+        }
+    </script>
+</body>
+</html>

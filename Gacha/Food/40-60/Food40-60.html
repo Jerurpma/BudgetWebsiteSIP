@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food 40-60 Randomizer</title>
+    <link rel="stylesheet" href="./styles/randomizer.css">
+</head>
+<body>
+    <h1>Food 40-60 Randomizer</h1>
+    <button onclick="randomizeImage()">Randomize Image</button>
+    <div class="container" id="imageContainer">
+        <!-- Image will be inserted here -->
+    </div>
+
+    <script>
+        // Function to randomize and display a single image
+        function randomizeImage() {
+            var imageContainer = document.getElementById('imageContainer');
+
+            // Remove existing image
+            imageContainer.innerHTML = '';
+
+            // Array of image URLs
+            var imageURLs = [
+                './images/mcdonalds.jfif',
+                './images/jackinthebox.png',
+                './images/burgerking.jpg',
+                // Add more image URLs here
+            ];
+
+            // Select a random image URL from the array
+            var randomIndex = Math.floor(Math.random() * imageURLs.length);
+            var randomImageURL = imageURLs[randomIndex];
+
+            // Create image element and set its attributes
+            var img = document.createElement('img');
+            img.src = randomImageURL;
+            img.className = 'image';
+
+            // Append the image element to the container
+            imageContainer.appendChild(img);
+        }
+    </script>
+</body>
+</html>
